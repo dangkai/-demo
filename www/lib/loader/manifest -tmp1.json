@@ -1,0 +1,183 @@
+{
+  "files": {
+    "index.js": {
+      "version": "1",
+      "filename": "index.js"
+    },
+    "modules/login/login.js": {
+      "version": "1",
+      "filename": "modules/login/login.js"
+    },
+    "modules/launch/launch.js": {
+      "version": "1",
+      "filename": "modules/launch/launch.js"
+    },
+    "modules/plugin/plugin.js": {
+      "version": "1",
+      "filename": "modules/plugin/plugin.js"
+    },
+    "modules/home/home.js": {
+      "version": "1",
+      "filename": "modules/home/home.js"
+    },
+    "modules/list/list.js": {
+      "version": "1",
+      "filename": "modules/list/list.js"
+    },
+    "modules/list/list2.js": {
+      "version": "1",
+      "filename": "modules/list/list2.js"
+    },
+    "modules/list/list3.js": {
+      "version": "1",
+      "filename": "modules/list/list3.js"
+    },
+    "modules/detail/detail.js": {
+      "version": "1",
+      "filename": "modules/detail/detail.js"
+    },
+    "modules/add/add.js": {
+      "version": "1",
+      "filename": "modules/add/add.js"
+    },
+    "modules/demo/demo.js": {
+      "version": "1",
+      "filename": "modules/demo/demo.js"
+    },
+    "modules/demo/demo-add.js": {
+      "version": "1",
+      "filename": "modules/demo/demo-add.js"
+    },
+    "modules/demo/demo-detail.js": {
+      "version": "1",
+      "filename": "modules/demo/demo-detail.js"
+    },
+    "modules/bulletin/bulletin.js": {
+      "version": "1",
+      "filename": "modules/bulletin/bulletin.js"
+    },
+    "modules/bulletin/bulletinDetail.js": {
+      "version": "1",
+      "filename": "modules/bulletin/bulletinDetail.js"
+    },
+    "modules/meeting/meeting.js": {
+      "version": "1",
+      "filename": "modules/meeting/meeting.js"
+    },
+    "modules/meeting/meetingDetail.js": {
+      "version": "1",
+      "filename": "modules/meeting/meetingDetail.js"
+    },
+    "modules/todo/todo.js": {
+      "version": "1",
+      "filename": "modules/todo/todo.js"
+    },
+    "modules/todoV6/todo.js": {
+      "version": "1",
+      "filename": "modules/todoV6/todo.js"
+    },
+    "modules/todoDetail/demoDetailMobile.js": {
+      "version": "1",
+      "filename": "modules/todoDetail/demoDetailMobile.js"
+    },
+    "modules/todoDetail/demoV5DetailMobile.js": {
+      "version": "1",
+      "filename": "modules/todoDetail/demoV5DetailMobile.js"
+    },
+    "modules/contact/contact.js": {
+      "version": "1",
+      "filename": "modules/contact/contact.js"
+    },
+    "modules/contact/contact-detail.js": {
+      "version": "1",
+      "filename": "modules/contact/contact-detail.js"
+    },
+    "modules/commonselect/userselect.js": {
+      "version": "1",
+      "filename": "modules/commonselect/userselect.js"
+    },
+    "modules/workflow/avicit-workflow.js": {
+      "version": "1",
+      "filename": "modules/workflow/avicit-workflow.js"
+    },
+    "modules/workflow/workflowSubmit.js": {
+      "version": "1",
+      "filename": "modules/workflow/workflowSubmit.js"
+    },
+    "modules/workflow/todoOpinion.js": {
+      "version": "1",
+      "filename": "modules/workflow/todoOpinion.js"
+    },
+    "modules/workflowV6/avicit-workflow.js": {
+      "version": "1",
+      "filename": "modules/workflowV6/avicit-workflow.js"
+    },
+    "modules/workflowV6/workflowSubmit.js": {
+      "version": "1",
+      "filename": "modules/workflowV6/workflowSubmit.js"
+    },
+    "modules/workflowV6/todoOpinion.js": {
+      "version": "1",
+      "filename": "modules/workflowV6/todoOpinion.js"
+    },
+    "modules/workflowV6/launchworkflow.js": {
+      "version": "1",
+      "filename": "modules/workflowV6/launchworkflow.js"
+    },
+    "modules/loading/loading.js": {
+      "version": "1",
+      "filename": "modules/loading/loading.js"
+    },
+    "modules/lock/lock.js": {
+      "version": "1",
+      "filename": "modules/lock/lock.js"
+    },
+    "modules/lock/lock-set.js": {
+      "version": "1",
+      "filename": "modules/lock/lock-set.js"
+    },
+    "modules/lock/lock-code.js": {
+      "version": "1",
+      "filename": "modules/lock/lock-code.js"
+    }
+  },
+  "load": [
+    "index.js",
+    "modules/login/login.js",
+    "modules/launch/launch.js",
+    "modules/plugin/plugin.js",
+    "modules/home/home.js",
+    "modules/list/list.js",
+    "modules/list/list2.js",
+    "modules/list/list3.js",
+    "modules/detail/detail.js",
+    "modules/add/add.js",
+    "modules/demo/demo.js",
+    "modules/demo/demo-add.js",
+    "modules/demo/demo-detail.js",
+    "modules/bulletin/bulletin.js",
+    "modules/bulletin/bulletinDetail.js",
+    "modules/meeting/meeting.js",
+    "modules/meeting/meetingDetail.js",
+    "modules/todo/todo.js",
+    "modules/todoV6/todo.js",
+    "modules/todoDetail/demoDetailMobile.js",
+    "modules/todoDetail/demoV5DetailMobile.js",
+    "modules/contact/contact.js",
+    "modules/contact/contact-detail.js",
+    "modules/commonselect/userselect.js",
+    "modules/workflow/avicit-workflow.js",
+    "modules/workflow/workflowSubmit.js",
+    "modules/workflow/todoOpinion.js",
+    "modules/workflowV6/avicit-workflow.js",
+    "modules/workflowV6/workflowSubmit.js",
+    "modules/workflowV6/todoOpinion.js",
+    "modules/workflowV6/launchworkflow.js",
+    "modules/loading/loading.js",
+    "modules/vpn/vpn.js",
+    "modules/lock/lock.js",
+    "modules/lock/lock-set.js",
+    "modules/lock/lock-code.js"
+  ],
+  "version": "1"
+}

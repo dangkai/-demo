@@ -1,0 +1,35 @@
+<style type="text/css">
+.page-header {
+    margin: 0 0 12px;
+    border-bottom: 1px dotted #e2e2e2;
+    padding-bottom: 16px;
+    padding-top: 7px;
+}
+
+.page-content {
+    background-color: #ffffff;
+    position: relative;
+    margin: 0;
+    padding: 8px 20px 24px;
+}
+</style>
+<ion-modal-view ng-controller="BulletinDetailCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="detailModal.close()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">详情</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="page-content" id="bulletinContent">
+			<div class="page-header">
+				<h2 style="margin-bottom: 0;color:#2679b5">{{detailModal.detailList.title}}</h2>
+			</div>
+			<div ng-bind-html="contentForRest">
+			</div>
+		</div>
+	</ion-content>
+</ion-modal-view>
+

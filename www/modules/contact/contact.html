@@ -1,0 +1,32 @@
+<ion-modal-view ng-controller="ContactCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="contactModal.close()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">通讯录</h1>
+	</ion-header-bar>
+	<ion-content scrollbar-y="false" delegate-handle="contactusers" direction="y" zomming="true">
+		<div style="background-color:#dddddd;padding:0.7rem 2rem">
+			<div style="width:100%;padding:0;padding-left:1rem;background-color:#ffffff">
+				<input style="width:90%;margin-left:1rem" type="search" ng-change="searchchange()" 
+					placeholder="搜索" ng-model="searchvalue">
+			</div>
+		</div>
+		<ion-list>
+			<ion-item collection-repeat="user in contactlist | filter:searchvalue"
+				 collection-item-width="'100%'"
+				 collection-item-height="80"
+				 id="{{user.id}}"
+				 ng-click="next(user)">
+				<div style="float:left;width:80%"><h2>{{user.NAME}}</h2>
+				<p>{{user.DEPT_NAME}}</p></div>
+			</ion-item>
+		<ion-list>
+	</ion-content>
+	<div style="position:absolute;width:4%;left:96%;top:7rem;">
+		<div ng-repeat="c in chars" style="color:#0e6dd0;height:1.1rem;" ng-mouseenter="scrollto(c)">{{c|uppercase}}</div>
+	</div>
+</ion-modal-view>
+

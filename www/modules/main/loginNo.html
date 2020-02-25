@@ -1,0 +1,48 @@
+<style>
+
+.login_button{
+   background-color:#007BEC;
+    width:90%;
+    text-align:center;
+    color:white;
+    font-size:1rem;
+    padding: 1rem;
+    border-radius:5px
+}
+</style>
+<ion-modal-view ng-controller="LoginNoCtrl">
+  <ion-header-bar class="bar-positive" align-title="center">
+    <div class="buttons">
+      <button class="button button-icon icon ion-ios-arrow-left button-clear"
+              ng-click="goBack()">返回
+      </button>
+    </div>
+    <h1 class="title">二维码功能</h1>
+    <div class="buttons">
+      <button class="button button-icon icon ion-qr-scanner  button-clear" ng-click="BarcodeSacnner()"></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">序列号:</span>
+        <input  type="text"   readonly="readonly"  ng-model="Form.serialNumber"/>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">型图号:</span>
+        <input  type="text"   readonly="readonly"  ng-model="Form.typeNumber"/>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">用户编号:</span>
+        <input  type="text"   readonly="readonly"  ng-model="Form.userNumber"/>
+      </label>
+
+    </div >
+    <div style="display:flex;justify-content:center;align-items:center;width:100%;;margin-top:2rem" ng-click="doPost()">
+      <div class="login_button">
+        提交
+      </div>
+    </div>
+  </ion-content>
+
+</ion-modal-view>

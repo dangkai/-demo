@@ -1,0 +1,24 @@
+﻿<ion-modal-view ng-controller="DatePickerCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="datepickerModal.close()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">日期控件</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="list">
+			<div class="item">
+				{{ data1.date }} <br>
+				<button class="button button-block button-positive"
+					ng-click="pick('date')">选择日期</button>
+			</div>
+			<div class="item">
+				{{ data1.time }} <br>
+				<button class="button button-block button-positive"
+					ng-click="pick('time')">选择时间</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-modal-view>

@@ -1,0 +1,42 @@
+<style>
+.item-content{
+	padding-right:16px !important;
+}
+</style>
+<ion-modal-view ng-controller="TodoV5Ctrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="goBack()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">待办事宜</h1>
+	</ion-header-bar>
+	<ion-content>
+    <light-gallery>
+    <ul id="lightgallery" class="list-unstyled row">
+      <li  data-responsive="img/1-375.jpg 375, img/1-480.jpg 480, img/1.jpg 800" data-src="img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>图片标题1</p>">
+        <a href="">
+          <img class="img-responsive" src="img/thumb-1.jpg">
+        </a>
+      </li>
+      <li  data-responsive="img/2-375.jpg 375, img/2-480.jpg 480, img/2.jpg 800" data-src="img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>图片标题2</p>">
+        <a href="">
+          <img class="img-responsive" src="img/thumb-2.jpg">
+        </a>
+      </li>
+      <li data-responsive="img/13-375.jpg 375, img/13-480.jpg 480, img/13.jpg 800" data-src="img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>图片标题3</p>">
+        <a href="">
+          <img class="img-responsive" src="img/thumb-13.jpg">
+        </a>
+      </li>
+      <li data-responsive="img/4-375.jpg 375, img/4-480.jpg 480, img/4.jpg 800" data-src="img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>图片标题4</p>">
+        <a href="">
+          <img class="img-responsive" src="img/thumb-4.jpg">
+        </a>
+      </li>
+    </ul>
+    </light-gallery>
+	</ion-content>
+</ion-modal-view>
+

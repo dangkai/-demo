@@ -1,0 +1,477 @@
+<style>
+  .select_Subheader_Btn_selected{
+    background-color:#ffc900;
+  }
+  .select_Subheader_Btn_select{
+    background-color:lightgray;
+  }
+
+.contnt_back{
+   -webkit-background-image: url('img/main_back.jpg');
+  background-image: url('img/main_back_demo.jpg');
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  -webkit-background-size:100% 100%;
+  width:100%;
+  height:100%;
+  z-index:99;
+  position: relative;
+}
+.circle_style{
+   top: 24%;
+   border-radius: 50%;
+   width: 340px;
+   height: 340px;
+   left: 44%;
+   border: 30px solid white;
+   border-color: rgba(255,251,240,.44);
+   position: absolute;
+   z-index:100;
+ }
+  .circle_style_demo{
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    border: 15px solid white;
+    border-color: rgba(255,251,240,.7);
+  }
+  .circle_style_test{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border: 10px solid white;
+    border-color: rgba(255,251,240,0.9);
+  }
+
+  .col_style_meu{
+    top: 15%;
+    left: 46%;
+    position: absolute;
+    z-index:101;
+    color:white;
+  }
+  .col_style_message{
+    top: 27%;
+    left: 17%;
+    position: absolute;
+    z-index:101;
+    color:white;
+  }
+  .col_style_handler{
+    top: 44%;
+    left: 4%;
+    position: absolute;
+    z-index:101;
+    color:white;
+  }
+  .col_style_statistics{
+    top: 63%;
+    left: 15%;
+    position: absolute;
+    z-index:101;
+    color:white;
+  }
+  .col_style_self{
+    top: 76%;
+    left: 40%;
+    position: absolute;
+    z-index:101;
+    color:white;
+  }
+  .col_style_div{
+    font-size: 1.1rem;
+    font-weight: 200;
+    white-space: nowrap;
+  }
+  .col_style_col_row{
+    white-space: nowrap;
+  }
+  .image_style{
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color:white;
+  }
+  .BACK_STYLE{
+    background-color:#0F0C42 #0F2A82;#327CC7
+    top:44px;
+  }
+  .tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+    margin-top: -2px;
+    border-style: solid;
+   border-width: 0px 0 0 0;
+    border-color: #444;
+  }
+  .tabs-striped.tabs-light .tab-item.tab-item-active, .tabs-striped.tabs-light .tab-item.active, .tabs-striped.tabs-light .tab-item.activated {
+    margin-top: -2px;
+    color: #444;
+    border-style: solid;
+    border-width: 0px 0 0 0;
+    border-color: #444;
+  }
+  .slider {
+    position: relative;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  .circle_div_style{
+    justify-content: center;;
+    align-items: center;
+    width:100%;
+    display: flex;
+    padding-top:10px
+  }
+
+  .circle_div_style span{
+    width:10px;height:10px;
+    border-radius:50%;
+    border:1px solid #fff;
+    float:left
+  }
+  .circle_div_style span{
+    width:10px;height:10px;
+    border-radius:50%;
+    border:1px solid #fff;
+    float:left
+  }
+  .circle_div_style_span_active{
+
+    background:transparent;
+    }
+  .circle_div_style_span_actived{
+    background:#fff;
+  }
+  .circle_div_style_span_active .circle_div_style_span_actived{
+    width:10px;height:10px;
+    border-radius:50%;
+    border:1px solid #fff;
+    float:left
+  }
+  .text_font{
+    font-family:Arial,Verdana,Sans-serif;
+    font-size:1rem;
+  }
+  .row_style{
+    background: #327CC7;
+    padding:1rem 0.2rem;
+  }
+
+  .circle_back1_style{
+   background: yellow;
+  }
+  .circle_back2_style{
+    background: red;
+  }
+  .circle_back3_style{
+    background:blue;
+  }
+  .circle_back_type1_style{
+    width:3rem;height:3rem;
+    border-radius:50%;
+    float:left
+  }
+</style>
+<ion-modal-view ng-controller="mainCtrl">
+
+  <!--侧滑动画-->
+  <ion-side-menus>
+      <ion-side-menu-content >
+      <ion-tabs class="tabs-icon-top  ion-tabs-color   tabs-color-active-positive" >
+    <ion-tab
+      icon-on="ion-ios-filing"
+      icon-off="ion-ios-filing-outline"
+      title="首页">
+        <ion-header-bar align-title="center"
+                        class="bar-positive"
+                        class="bar-calm">
+        <button class="button icon ion-navicon" ng-click="toggleLeftFun()"></button>
+        <h1 class="title" style="font-size: 20px;">首页</h1> 
+        </ion-header-bar>
+        <ion-content>
+      <ion-content class="BACK_STYLE">
+        <div class="row  row_style" >
+           <div class="col" style="text-align: center" ng-click="testList(0)">
+               <div>
+                 <i class="icon ion-grid"  style="font-size: 3.2rem;color:white"></i>
+               </div>
+             <div style="color:white;font-weight: bold;"class="text_font">
+               图表
+             </div>
+           </div>
+          <div class="col" style="text-align: center"  ng-click="testList(1)">
+            <div>
+              <i class="icon ion-grid"  style="font-size: 3.2rem;color:white"></i>
+            </div>
+            <div style="color:white;font-weight: bold;"class="text_font">
+              OCR
+            </div>
+          </div>
+       <!--   <div class="col" style="text-align: center" ng-click="testList(2)">
+            <div>
+              <i class="icon ion-grid"  style="font-size: 3.2rem;color:white"></i>
+            </div>
+            <div style="color:white;font-weight: bold;"class="text_font">
+              列表
+            </div>
+          </div> -->
+       <!--   <div class="col" style="text-align: center" ng-click="testList(3)">
+            <div>
+              <i class="icon ion-grid"  style="font-size: 3.2rem;color:white"></i>
+            </div>
+            <div style="color:white;font-weight: bold;"class="text_font">
+              通讯录
+            </div>
+          </div> -->
+        </div>
+          <!--<ion-slide-box  on-slide-changed="slideHasChanged($index)">-->
+        <!--<ion-slide style="height: 100%;width:100%; background:#000">-->
+          <!--<div style="height: 14rem;-->
+                     <!--width:100%;-->
+                   <!--border-width: 1px"-->
+               <!--hight-char-test-->
+              <!--&gt;-->
+          <!--</div>-->
+        <!--</ion-slide>-->
+        <!--<ion-slide>-->
+          <!--<div style="height: 14rem;-->
+                     <!--width:100%;-->
+                   <!--padding:10px;-->
+                   <!--border-width: 1px"-->
+               <!--hight-char-info>-->
+          <!--</div>-->
+        <!--</ion-slide>-->
+        <!--<ion-slide>-->
+          <!--<div style="height: 14rem;-->
+                     <!--width:100%;-->
+                   <!--padding:10px;-->
+                   <!--border-width: 1px"-->
+               <!--hight-char>-->
+          <!--</div>-->
+        <!--</ion-slide>-->
+      <!--</ion-slide-box>-->
+        <!--<div-->
+          <!--style="width:100%;;-->
+           <!--padding:10px 5px 5px 5px;">-->
+          <!--&lt;!&ndash;标题头显示&ndash;&gt;-->
+            <!--<div  class="row" style="padding:0px;margin:0px">-->
+              <!--<div class="col"style="padding:0px;margin:0px" ng-click="testList(0)">-->
+                <!--<div style="width:100%;height:100%">-->
+                  <!--<div style="width:{{circleWidth}}px;height:{{circleWidth}}px;-->
+                  <!--border-radius: 50%;background:red"></div>-->
+                  <!--<p style="text-align: center;">二维码扫描</p>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="col"style="padding:0px;margin:0px"ng-click="testList(1)">-->
+                <!--<div style="width:100%;height:100%">-->
+                  <!--<div style="width:{{circleWidth}}px;height:{{circleWidth}}px;border-radius: 50%;background:red"></div>-->
+                  <!--<p style="text-align: center;">图片识别</p>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="col"style="padding:0px;margin:0px"ng-click="testList(2)">-->
+                <!--<div style="width:100%;height:100%">-->
+                  <!--<div style="width:{{circleWidth}}px;height:{{circleWidth}}px;border-radius: 50%;background:red"></div>-->
+                  <!--<p style="text-align: center;">列表</p>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="col"style="padding:0px;margin:0px"ng-click="testList(3)">-->
+                <!--<div style="width:100%;height:100%">-->
+                  <!--<div style="width:{{circleWidth}}px;height:{{circleWidth}}px;border-radius: 50%;background:red"></div>-->
+                  <!--<p>图片预览</p>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div-->
+          <!--style="width:100%;;-->
+           <!--padding:10px 5px 5px 5px;"-->
+        <!--&gt;-->
+          <!--&lt;!&ndash;标题头显示&ndash;&gt;-->
+
+          <!--<div  class="row" style="padding:0px;margin:0px">-->
+            <!--<div class="col"stylione="padding:0px;margin:0px" ng-click="testList(0)">-->
+              <!--<div style="width:100%;height:100%">-->
+                <!--<div style="width:{{circleWidth}}px;height:{{circleWidth}}px;-->
+                  <!--border-radius: 50%;background:red"></div>-->
+                <!--<p>二维码扫描</p>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col"style="padding:0px;margin:0px"ng-click="testList(1)">-->
+              <!--<div style="width:100%;height:100%">-->
+                <!--<div style="width:{{circleWidth}}px;height:{{circleWidth}}px;border-radius: 50%;background:red"></div>-->
+                <!--<p>图片识别</p>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col"style="padding:0px;margin:0px">-->
+              <!--<div style="width:100%;height:100%">-->
+                <!--<div style="width:{{circleWidth}}px;height:{{circleWidth}}px;border-radius: 50%;background:red"></div>-->
+                <!--<p>二维码扫描</p>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col"style="padding:0px;margin:0px">-->
+              <!--<div style="width:100%;height:100%">-->
+                <!--<div style="width:{{circleWidth}}px;height:{{circleWidth}}px;border-radius: 50%;background:red"></div>-->
+                <!--<p>二维码扫描</p>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <div>
+           <a href="#"  class="item item-icon-right" style="padding-right: 35px;"  ng-click="moreFun()">
+             <div style="float:right;;border: 0px solid;font-size:1rem"  >
+               更多
+               <i class="icon ion-ios-arrow-right" style=";padding:0px;font-size:1rem"></i>
+             </div>
+             <div style="float:left">
+               <span style="height:1rem;width: 1rem;border-radius:50%;background:blue"></span>
+               <span style="font-weight: bold">待办试项</span><span style="padding:0.3rem;font-weight: bold">({{modelData.length}})</span></div>
+           </a>
+        </div>
+        <div class="list"
+             ng-repeat=" info in  mainList  track by $index"
+             style="padding:0.8rem 0.3rem 0.8rem 0.5rem;
+             border: 1px solid #ddd;overflow: hidden;">
+         
+          <div  class="circle_back_type1_style"  style="position:relative;z-index:12;"  ng-style=" {background:info.typeColor}">
+						 <i style="position: absolute;z-index: 34;left:34%;top: 18%;color: white;font-size: 2rem;"
+						   class="icon " ng-class="{1:'ion-flag',2:'ion-document',3:'ion-compose'}[info.iType]"></i>
+          </div>
+          <div  style="float:left;padding-left:0.6rem ">
+          <h4 style="margin:0px 0px 5px 0px;vertical-align: center">{{info.name}}</h4>
+          <p style="margin-bottom: 2px;">{{info.text}}</p>
+          <p style="margin-bottom: 2px;">{{info.text}}</p>
+        </div>
+          <div  style="float:right;">
+             <span>{{info.time}}</span>
+          </div>
+        </div>
+        <div class="list card">
+          <div class="item  item-avatar">
+           <img src="img/myinfo_normal.png" />
+            <h2>Marty McFly</h2>
+            <p>November 05, 1955</p>
+          </div>
+           <div class="item item-body">
+             <img class="full-image" style="height:20%; width:100%" src="../../img/thumb-4.jpg">
+             <p>
+               菜鸟教程 -- 学的不仅是技术，更是梦想！<br>
+               菜鸟教程 -- 学的不仅是技术，更是梦想！<br>
+               菜鸟教程 -- 学的不仅是技术，更是梦想！<br>
+               菜鸟教程 -- 学的不仅是技术，更是梦想！
+             </p>
+             <p>
+               <a href="#" class="subdued">1 喜欢</a>
+               <a href="#" class="subdued">5 评论</a>
+             </p>
+           </div>
+
+
+        </div>
+        </div>
+      </ion-content>
+    </ion-tab>
+        <ion-tab
+          icon-on="ion-ios-filing"
+          icon-off="ion-ios-filing-outline"
+          title="模块"
+					  on-select="selectTabFun()"
+					>
+            <ion-header-bar align-title="center"  class="bar-positive"class="bar-calm">
+            <button class="button icon ion-navicon" ng-click="toggleLeftFun()"></button>
+            <h1 class="title" style="font-size: 20px;">模块</h1> 
+            </ion-header-bar>
+					<list-card-directive >
+						</list-card-directive>
+       <!--   <ion-content>
+							<div style="height:100%;width:100%;display: flex;justify-content: center;align-items: center;">
+							    模块功能的正在整合中。。。。。
+							</div>
+          <!-- <div class="list" ng-repeat="data in modelPoer track by $index"
+               ng-click="clickType($index)">
+             <div class="item item-right" >
+               <i class="ion-ios-arrow-right"></i>
+               {{data.name}}
+             </div>
+          </div> 
+          </ion-content> -->
+        </ion-tab>
+        <ion-tab
+          icon-on="ion-ios-filing"
+          icon-off="ion-ios-filing-outline"
+          title="列表">
+            <ion-header-bar align-title="center"  class="bar-positive"class="bar-calm">
+            <button class="button icon ion-navicon" ng-click="toggleLeftFun()"></button>
+            <h1 class="title" style="font-size: 20px;">列表</h1> 
+            </ion-header-bar>
+          <ion-content>
+					
+           <div class="list" ng-repeat="data in modelModel track by $index"
+                 ng-click="clickType($index)">
+              <a class="item  item-icon-right" href="#">
+                <i class="icon ion-ios-arrow-right"></i>
+                {{data.name}}
+              </a>
+            </div>
+          </ion-content>
+        </ion-tab>
+       </ion-tabs>
+     </ion-content>
+
+      </ion-side-menu-content>
+     <ion-side-menu side="left">
+      <ion-header-bar align-title="center" class="bar-positive">
+      <h1 class="title" style="font-size: 20px;">个人信息</h1> 
+      </ion-header-bar>
+      <ion-content>
+    <div style="display: flex;
+    justify-content: center;
+    align-items: center;padding:0.5rem 0px">
+      <img  style=" width:7rem;height:7rem
+           ;border-radius:50%;" ng-src="img/myinfo_normal.png"/>
+      <div/>
+
+    </div>
+    <ion-list style="padding:0px;margin:0px">
+     <ion-item style="padding:0px;margin:0px">
+       <a class="item   item-icon-left">
+         <i class=" icon ion-person"/>
+         <p>姓名:{{loginInfo.userName}}</p>
+       </a>
+       <a class="item   item-icon-left ">
+         <i class="icon icon ion-grid"/>
+         <p>部门:{{loginInfo.dept}}</p>
+       </a>
+       <a class="item item-icon-left">
+         <i class="icon ion-iphone"/>
+         <p>电话:{{loginInfo.iphone}}</p>
+       </a>
+       <a class="item   item-icon-left ">
+         <i class="icon ion-ios-email"/>
+         <p>邮箱:{{loginInfo.email}}</p>
+       </a>
+       <a class="item   item-icon-left ">
+         <i class="icon ion-android-pin"/>
+         <p>地址:{{loginInfo.city}}</p>
+       </a>
+     </ion-item>
+   </ion-list>
+      </ion-content>
+    <ion-footer-bar  class="bar-positive ">
+      <button class="button   button-full" style="margin: 0 auto"> 退出登陆</button>
+    </ion-footer-bar>
+      </ion-side-menu>
+     
+  </ion-side-menus>
+
+
+
+
+
+
+

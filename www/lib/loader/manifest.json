@@ -1,0 +1,83 @@
+{
+  "files": {
+    "cordova-app-loader-complete": {
+      "version": "c045ae7cb18b08056627e5d0c0e2b589a9e1ad3e",
+      "filename": "lib/loader/cordova-app-loader-complete.js"
+    },
+    "autoupdate": {
+      "version": "d86f9184792ae85f9a40f26792ee30d4d268b0b4",
+      "filename": "lib/loader/autoupdate.js"
+    },
+    "app": {
+      "version": "8ee5f02f24226e1fff12f2cceb83d31ce43aae8c",
+      "filename": "js/app.js"
+    },
+	 "index": {
+      "version": "21fb0b01a9fc0b2db810392f0b70740d68a43576",
+      "filename": "index.js"
+    }
+  },
+  "load": [
+    "lib/loader/cordova-app-loader-complete.js",
+    "lib/loader/autoupdate.js",
+    "js/app.js",
+	 "index.js"
+  ],
+  "version": "d35aa3c79890169d0b4190fdc03df26a008ff9f1"
+}
+
+// {
+//   "files": {
+//     "x": {}
+//   },
+//   "load": [
+//     "index.js",
+//     "modules/login/login.js",
+//     "modules/launch/launch.js",
+//     "modules/plugin/plugin.js",
+//     "modules/home/home.js",
+//     "modules/list/list.js",
+//     "modules/list/detail.js",
+//     "modules/list/list3.js",
+//     "modules/detail/detail.js",
+//     "modules/add/add.js",
+//     "modules/demo/demo.js",
+//     "modules/demo/demo-add.js",
+//     "modules/demo/demo-detail.js",
+//     "modules/bulletin/bulletin.js",
+//     "modules/bulletin/bulletinDetail.js",
+//     "modules/meeting/meeting.js",
+//     "modules/meeting/meetingDetail.js",
+//     "modules/todo/todo.js",
+//     "modules/todoV6/todo.js",
+//     "modules/todoDetail/demoDetailMobile.js",
+//     "modules/todoDetail/demoV5DetailMobile.js",
+//     "modules/contact/contact.js",
+//     "modules/contact/contact-detail.js",
+//     "modules/commonselect/userselect.js",
+//     "modules/workflow/avicit-workflow.js",
+//     "modules/workflow/workflowSubmit.js",
+//     "modules/workflow/todoOpinion.js",
+//     "modules/workflowV6/avicit-workflow.js",
+//     "modules/workflowV6/workflowSubmit.js",
+//     "modules/workflowV6/todoOpinion.js",
+//     "modules/workflowV6/launchworkflow.js",
+//     "modules/loading/loading.js",
+//     "modules/vpn/vpn.js",
+//     "modules/lock/lock.js",
+//     "modules/lock/lock-set.js",
+//     "modules/lock/lock-code.js",
+//     "modules/main/main.js",
+//     "modules/flight/flight.js",
+//     "modules/flight/flightAdd.js",
+//     "modules/flight/flightDetail.js",
+//     "modules/main/loginList.js",
+//     "modules/main/loginForm.js",
+//     "modules/main/loginFormCreate.js",
+//     "modules/main/loginNoList.js",
+//     "modules/main/model_Sccaner.js",
+//     "modules/char/char.js",
+//     "----load"
+//   ],
+//   "version": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+// }

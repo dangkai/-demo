@@ -1,0 +1,318 @@
+<style type="text/css">
+.page-header {
+    margin: 0 0 12px;
+    border-bottom: 1px dotted #e2e2e2;
+    padding-bottom: 16px;
+    padding-top: 7px;
+}
+
+.page-content {
+    background-color: #ffffff;
+    position: relative;
+    margin: 0;
+    padding: 8px 20px 24px;
+}
+
+.page-footbar{
+	background-color:#ffffff !important;
+	border-color:#B7BEC3 !important;
+	margin:0 !important;
+	height:49px;
+}
+
+.button-fullsize {
+    width:100%;
+    text-align:center;
+    margin:0 auto;
+    border:0;
+}
+
+.form-text{
+	display: block;
+    padding-top: 10px;
+    min-height:46px;
+    padding-left: 0;
+    padding-right: 15px;
+    text-align:right;
+    color: #111 !important;
+    vertical-align: middle;
+    line-height: 25px;
+    font-size: 1em !important;
+}
+.bar{
+	padding:0;
+}
+.norml-flow{
+	background:#DD2727;
+	font-size:10px !important;
+	color:#fff !important;
+	border-color:#fff;
+	border-right:1px solid #999999;
+}
+
+.commit-flow{
+	background:#DD2727;
+	font-size:15px !important;
+	color:#fff !important;
+}
+
+.back-flow{
+	background:#FF9500;
+	font-size:15px !important;
+	color:#fff !important;
+}
+
+
+
+
+
+.opinion-label{
+    display: block;
+    clear: both;
+    margin: 0;
+	padding : 6px 16px 5px;
+}
+.timeline-container {
+  position: relative;
+  padding-top: 4px;
+  margin-bottom: 32px;
+}
+.timeline-container:last-child {
+  margin-bottom: 0;
+}
+.timeline-container:before {
+  /* the vertical line running through icons */
+  content: "";
+  display: block;
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #E2E3E7;
+  background-color: #E7EAEF;
+  width: 4px;
+  border-width: 0 1px;
+}
+.timeline-container:first-child:before {
+  border-top-width: 1px;
+}
+.timeline-container:last-child:before {
+  border-bottom-width: 1px;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 8px;
+}
+.timeline-item .widget-box {
+  background-color: #F2F6F9;
+  color: #595C66;
+  padding-right:16px;
+}
+.timeline-item .transparent.widget-box {
+  border-left: 3px solid #DAE1E5;
+}
+.timeline-item .widget-box {
+  margin: 0;
+  position: relative;
+  max-width: none;
+  margin-left: 60px;
+}
+.timeline-item .widget-main {
+  margin: 0;
+  position: relative;
+  max-width: none;
+  border-bottom-width: 0;
+}
+.timeline-item .widget-body {
+  background-color: transparent;
+}
+.timeline-item .widget-toolbox {
+  padding: 4px 8px 0 !important;
+  background-color: transparent !important;
+  border-width: 0 !important;
+  margin: 0 0px !important;
+}
+.timeline-info {
+  float: left;
+  width: 60px;
+  text-align: center;
+  position: relative;
+}
+.timeline-info img {
+  border-radius: 100%;
+  max-width: 42px;
+}
+.timeline-info .label,
+.timeline-info .badge {
+  font-size: 12px;
+}
+.timeline-label {
+  display: block;
+  clear: both;
+  margin: 0 0 18px;
+  margin-left: 34px;
+}
+.timeline-item img {
+  border: 1px solid #AAA;
+  padding: 2px;
+  background-color: #FFF;
+}
+.timeline-style2:before {
+  display: none;
+}
+.timeline-style2 .timeline-item {
+  padding-bottom: 22px;
+  margin-bottom: 0;
+}
+.timeline-style2 .last-child {
+  padding-bottom: 0;
+}
+.timeline-style2 .last-child:before {
+  display: none !important;
+}
+.timeline-style2 .first-child:before {
+  display: block !important;
+}
+.timeline-style2 .timeline-item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 90px;
+  top: 5px;
+  bottom: -5px;
+  border-width: 0;
+  background-color: #DDD;
+  width: 2px;
+  max-width: 2px;
+}
+.timeline-style2 .timeline-item .transparent .widget-header {
+  background-color: transparent !important;
+}
+.timeline-style2 .timeline-item .transparent.widget-box {
+  background-color: transparent !important;
+  border-left: none !important;
+}
+.timeline-style2 .timeline-info {
+  width: 100px;
+}
+.timeline-style2 .timeline-indicator {
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px;
+  width: 12px;
+  border-width: 1px !important;
+  background-color: #FFFFFF !important;
+  position: absolute;
+  left: 85px;
+  top: 3px;
+  opacity: 1;
+  border-radius: 100%;
+  display: inline-block;
+  padding: 0;
+}
+.timeline-style2 .timeline-user {
+  display: inline-block;
+  width: 72px;
+  text-align: right;
+  margin-right: 25px;
+  font-size: 15px;
+}
+.timeline-style2 .timeline-item .widget-box {
+  margin-left: 112px;
+}
+.timeline-style2 .timeline-label {
+  width: 75px;
+  text-align: center;
+  margin-left: 0;
+  margin-bottom: 10px;
+  text-align: right;
+  color: #666;
+  font-size: 14px;
+}
+.timeline-time {
+  text-align: center;
+  position: static;
+}
+.timeline-date {
+	color: #4383B4;
+	line-height:30px;
+}
+
+
+/* .opinion-area{
+	border-bottom: 1px dotted #e2e2e2;
+}
+
+.opinion-items{
+
+	position: relative;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.opinion-items:before{
+	content: "";
+    display: block;
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    border: 1px solid #E2E3E7;
+    background-color: #E7EAEF;
+    width: 4px;
+    border-width: 0 1px;
+}
+
+
+.opinion-item {
+padding-bottom:15px;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.opinion-icon {
+    float: left;
+    width: 60px;
+    text-align: center;
+    position: relative;
+}
+
+.opinion-text {
+	margin: 0;
+    position: relative;
+    max-width: none;
+    margin-left: 60px;
+    padding-top:3px;
+}
+
+.opinion-indicator {
+    opacity: 1;
+    border-radius: 100%;
+    display: inline-block;
+    font-size: 16px;
+    height: 36px;
+    line-height: 30px;
+    width: 36px;
+    text-align: center;
+    text-shadow: none!important;
+    padding: 0;
+    cursor: default;
+    border: 3px solid #FFF!important;
+    background:#FF9500;
+} */
+</style>
+<ion-modal-view ng-controller="DemoV5DetailMobileCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="detailModal.close()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">待办详情</h1>
+	</ion-header-bar>
+		<ion-content>
+	<workflow-v5>
+	</workflow-v5>
+	</ion-content>
+</ion-modal-view>
+

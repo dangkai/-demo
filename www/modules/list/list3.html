@@ -1,0 +1,77 @@
+<ion-modal-view ng-controller="ListCtrl3">
+	<ion-tabs class="tabs-stable tabs-top tabs-color-active-positive">
+        <ion-tab title="列表三.AVATAR">
+			<ion-header-bar class="bar-positive" align-title="center">
+				<div class="buttons">
+					<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="listModal3.close()">
+						返回
+					</button>
+				</div>
+				<h1 class="title">列表三</h1>
+				<div class="buttons" style="display:none;">
+					<button class="button button-icon icon ion-ios-plus-empty" ng-click="goAdd()"></button>
+				</div>
+			</ion-header-bar>
+			<ion-content>
+				<ion-refresher pulling-text="下拉刷新" on-refresh="listModal3.doRefresh()"></ion-refresher>
+				<ion-list>
+					<ion-item ng-repeat="item in listModal3.data" 
+						  item="item"
+						  href="#/item/{{item.id}}" class="item-remove-animate item-avatar">
+					<img src="img/333.png">
+					<h2>Title {{ item.id }}</h2>
+					<p>Content : Item {{ item.id }}</p>
+					</ion-item>
+				</ion-list>
+				<ion-infinite-scroll ng-if="listModal3.moredata" on-infinite="listModal3.loadMore()" distance="1%" ></ion-infinite-scroll>
+			</ion-content>
+		</ion-tab>
+		<ion-tab title="列表三.THUMBNAIL">
+			<ion-header-bar class="bar-positive" align-title="center">
+				<div class="buttons">
+					<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="listModal3.close()">
+						返回
+					</button>
+				</div>
+				<h1 class="title">列表三</h1>
+				<div class="buttons" style="display:none;">
+					<button class="button button-icon icon ion-ios-plus-empty" ng-click="goAdd()"></button>
+				</div>
+			</ion-header-bar>
+			<ion-content>
+				<ion-refresher pulling-text="下拉刷新" on-refresh="listModal3.doRefresh()"></ion-refresher>
+				<ion-list>
+					<ion-item ng-repeat="item in listModal3.data" 
+						  item="item"
+						  href="#/item/{{item.id}}" class="item-remove-animate item-thumbnail-left">
+						<img src="img/333.png">
+						<h2>Title {{ item.id }}</h2>
+						<p>Content : Item {{ item.id }}</p>
+					</ion-item>
+				</ion-list>
+				<ion-infinite-scroll ng-if="listModal3.moredata" on-infinite="listModal3.loadMore()" distance="1%" ></ion-infinite-scroll>
+			</ion-content>
+		</ion-tab>
+		 <ion-tab title="列表三.TABLE">
+			<ion-header-bar class="bar-positive" align-title="center">
+				<div class="buttons">
+					<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="listModal3.close()">
+						返回
+					</button>
+				</div>
+				<h1 class="title">列表三</h1>
+				<div class="buttons" style="display:none;">
+					<button class="button button-icon icon ion-ios-plus-empty" ng-click="goAdd()"></button>
+				</div>
+			</ion-header-bar>
+			<ion-content>
+				<ion-refresher pulling-text="下拉刷新" on-refresh="listModal3.doRefresh()"></ion-refresher>
+				<div ng-repeat="item in listModal3.data" ng-style="myObj">
+					Item {{ item.id }}
+				</div>
+				<ion-infinite-scroll ng-if="listModal3.moredata" on-infinite="listModal3.loadMore()" distance="1%" ></ion-infinite-scroll>
+			</ion-content>
+		</ion-tab> 
+	</ion-tabs>
+</ion-modal-view>
+

@@ -1,0 +1,17 @@
+﻿<ion-modal-view ng-controller="FlashlightCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="flashlightModal.close()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">文件下载</h1>
+	</ion-header-bar>
+	<ion-content scroll="false" padding="true">
+
+		<button ng-click="on()" class="button button-block button-energized">On</button>
+
+		<button ng-click="off()" class="button  button-block button-dark">Off</button>
+
+  </ion-content>
+</ion-modal-view>

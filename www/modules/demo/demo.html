@@ -1,0 +1,31 @@
+<ion-modal-view ng-controller="DemoCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="demoModal.close()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">Demo列表页</h1>
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-plus-empty" ng-click="demoModal.goAdd()"></button>
+		</div>
+	</ion-header-bar>
+	<ion-content>
+		<ion-refresher pulling-text="下拉刷新" on-refresh="demoModal.doRefresh()"></ion-refresher>
+		<ion-list>
+			<ion-item ng-repeat="item in demoModal.data" 
+                  item="item"
+				  ng-click="demoModal.open('{{item.id}}')"
+                  class="item-remove-animate">
+				<span style='float:right'><i class="ion-clock" style="color:green;padding-right: 5px"></i>
+				{{item.dateformat}}</span><h3 style="color:#888888">{{item.draftUserName}}</h3>
+				<h2 style="padding-top:5px">{{item.title}}</h2>
+			    <ion-option-button class="button-assertive" ng-click="demoModal.onItemDelete(item)">
+					Delete
+				</ion-option-button>
+			</ion-item>
+		</ion-list>
+		<ion-infinite-scroll ng-if="demoModal.moredata" on-infinite="demoModal.loadMore()" distance="1%" ></ion-infinite-scroll>
+	</ion-content>
+</ion-modal-view>
+

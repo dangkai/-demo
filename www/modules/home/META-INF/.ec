@@ -1,0 +1,10 @@
+component.id=null
+component.path=home
+component.name=首页
+component.version=null
+component.type=null
+component.modules=
+component.service=
+component.dao=
+component.auto=false
+component.iscomp=false

@@ -1,0 +1,43 @@
+<style>
+.page-footbar{
+	background-color:#ffffff !important;
+	border-color:#B7BEC3 !important;
+	margin:0 !important;
+	height:53px;
+}
+</style>
+<ion-modal-view ng-controller="AvicitWorkflowCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="submitModal.close()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">流程提交</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="item item-input" ng-repeat="suser in submitModal.userList">
+			<span class="input-label" style="width:20%">分支{{suser.index+1}}</span>
+			<div style="width:70%">
+				<div
+					style="height:2.0rem;font-size:1.2rem;font-family: 'Microsoft YaHei';float:left;margin-top:0.1rem;margin-left:0.5rem;border-radius:1rem;background-color:#cfe0ee; margin-bottom:0.4rem;color:#4880c8"
+					ng-repeat="user in suser.userdata">
+					<div
+						style="float:left;padding:0.3rem 0.4rem 0.3rem 0.8rem;color:#3e96d0;">
+						{{user.name}}</div>
+					<div
+						style="float:left;height:100%;padding-top:0.3rem;padding-right:0.8rem">
+						<i style="margin-top:1rem" class=" icon ion-ios-close-outline"
+							ng-click="delReceiver(user.id,suser.index)"> </i>
+					</div>
+				</div>
+			</div>
+			<button class="button button-icon icon ion-ios-plus-outline"
+				ng-click="selectReceiver(suser.index)" style="font-size:1.5rem;"></button>
+		</div>
+		<label class="item" style="border-bottom:0">
+            <button class="button button-block button-positive" type="submit" ng-click="workflowSubmit()">提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+        </label>
+	</ion-content>
+</ion-modal-view>
+
