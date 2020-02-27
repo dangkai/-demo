@@ -240,12 +240,12 @@
           <button class="button button-icon icon  ion-ios-minus-outline" ng-click="selectFun()"></button>
         </div>
       </ion-header-bar>
-			  <ion-content  http-directive ><ion-refresher pulling-text="{{refresh}}" on-refresh="doRefresh()">
+		<!-- 	  <ion-content  http-directive ><ion-refresher pulling-text="{{refresh}}" on-refresh="doRefresh()">
 				</ion-refresher>
 			<div class="list" ng-repeat="data in  list_Data track by $index" ng-click="detail(data)">
 	<!--<div class="item item-checkbox" ng-class="{true:'list_div',false:'list_div_test'}[flagShow]">
 			<label class="checkbox" ng-class="{true:' list_visible_check_test',false:'list_hidden_check_test'}[flagShow]">
-		 -->	
+	
 				<div class="item item-checkbox" ng-class="{true:'list_div',false:'list_div_test'}[flagShow]">
 		 		<label class="checkbox" ng-class="{true:' list_visible_check_test',false:'list_hidden_check_test'}[flagShow]">
 		    <input type="checkbox" checked="data.flag">
@@ -256,12 +256,12 @@
 			<p>{{data.time}}</p>
 			</div> </div> 
 			</div>
-			</ion-content>
+			</ion-content> -->
 			
 			
-		  <!-- <list-directive>
+		   <list-directive flagshow="flagShow">
 					
-				</list-directive> --> 
+				</list-directive> 
 			
 			
 			<!-- <ion-list ng-reapet="item in Data" >

@@ -1,8 +1,8 @@
 
 var fs = new CordovaPromiseFS({ persistent: typeof cordova !== 'undefined' });
 //var SERVER = 'http://localhost:3000/';
-// var SERVER = 'http://219.141.240.105:8009/avicit-platform6-main-mgate/static/';
-var SERVER = 'http://114.116.122.201:8012/';
+var SERVER = 'http://219.141.240.105:8009/avicit-platform6-main-mgate/static/';
+// var SERVER = 'http://114.116.122.201:8012/';
 
 var loader = window.loader = new CordovaAppLoader({
   fs: fs,
@@ -53,4 +53,3 @@ loader.check(SERVER + "manifest.json" + cacheBuster).then(function(msg){
       angular.bootstrap(document, ['starter']);
   });
 });
-alert("cordova-app-loader success");

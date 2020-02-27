@@ -119,15 +119,15 @@ app.controller('mainCtrl', ['$scope', 'modalService', '$http', 'requestService',
           modalService.create("sccaner","modules/main/model_Sccaner.html",$scope);
      };
     //显示
-            $scope.Data=["","",""];
-          //声明副标题按钮标记
-          $scope.btn_flag=1;
-          //返回标记
-           $scope.back_flag=false;
-           //标点
-           $scope.currIndex=0;
-           //获取屏幕宽度
-          $scope.circleWidth= (document.body.clientWidth/4)-10;
+			$scope.Data=["","",""];
+			//声明副标题按钮标记
+			$scope.btn_flag=1;
+			//返回标记
+			$scope.back_flag=false;
+			//标点
+			$scope.currIndex=0;
+			//获取屏幕宽度
+			$scope.circleWidth= (document.body.clientWidth/4)-10;
 
      /**
      * @auther dk
@@ -193,7 +193,8 @@ app.controller('mainCtrl', ['$scope', 'modalService', '$http', 'requestService',
           break;
         case 2:
           //列表
-          modalService.create("meeting","modules/meeting/meeting.html",$scope);
+					 modalService.create("list3","modules/list/list3.html",$scope);
+					   // modalService.create("list2","modules/list/list2.html",$scope);
           break;
         case 3:
           //联系人
@@ -221,7 +222,8 @@ app.controller('mainCtrl', ['$scope', 'modalService', '$http', 'requestService',
      * 点击更多方法
      */
     $scope.moreFun=function(){
-      modalService.create("list","modules/list/list.html",$scope);
+			modalService.create("list2","modules/list/list2.html",$scope);
+      // modalService.create("list","modules/list/list.html",$scope);
     };
     /**
      * @author dk

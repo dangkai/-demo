@@ -20,7 +20,6 @@ app.controller('ListCtrl1',
        *  点击方法
        */
       $scope.deleteFun=function(){
-        console.log("deleteFun");
         $scope.flagShow=! $scope.flagShow;
 				
       };
@@ -31,7 +30,6 @@ app.controller('ListCtrl1',
 		 $scope.selectFun=function(){
 	    $scope.flagShow=! $scope.flagShow;
 				// $scope.flagTest=!$scope.flagTest;
-				
 				console.log(	$scope.flagTest);
 			};
       /**

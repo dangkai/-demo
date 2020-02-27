@@ -5,8 +5,8 @@ app.controller('LoginCtrl', ['$scope', 'modalService', '$http', 'requestService'
     //华为云功能集成token:
     $scope.Token="";
     $scope.testLogin=function(){
-			avicitMobileApi.jpushService().testJpush();
-			 return;
+// 			avicitMobileApi.jpushService().testJpush();
+// 			 return;
       var  url="https://iam.cn-north-4.myhuaweicloud.com/v3/auth/tokens";
 		 // var url="http://192.168.0.115:8088/ZHJKF/api/zhjkf/jcsj/basicinfo/jcsjaircraftsystem/JcsjAircraftSystemRest/search/v1";
 //     var url="http://192.168.0.115:8088/ZHJKF/api/zhjkf/jcsj/basicinfo/jcsjaircraftsystem/JcsjAircraftSystemRest/search";

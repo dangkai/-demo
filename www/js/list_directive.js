@@ -8,7 +8,7 @@ app.directive('listDirective', function(){
 		restrict:'AE',
 		template: function (elem, attr) {
 		var temp = "";
-	  temp+='<ion-content  http-directive ><ion-refresher pulling-text="{{refresh}}" on-refresh="doRefresh()"></ion-refresher>"',
+	  temp+='<ion-content  http-directive ><ion-refresher pulling-text="{{refresh}}" on-refresh="doRefresh()"></ion-refresher>',
       temp+='<div  style="height:12px;background:#ddd"></div> <div class="list" ng-repeat="data in  Data track by $index" ng-click="detail(data)">',
       temp+= '<div class="item item-checkbox" ng-class="{true:\'list_div\'\,false:\'\list_div_test\'\}['+attr.flagshow+']"> '
       temp+= ' <label class="checkbox" ng-class="{true:\'\ list_visible_check_test\'\,false:\'\list_hidden_check_test\'\}['+attr.flagshow+']">',
