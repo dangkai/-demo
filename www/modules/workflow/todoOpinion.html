@@ -1,0 +1,380 @@
+<style>
+
+.opinion-label{
+    display: block;
+    clear: both;
+    margin: 0;
+	padding : 6px 16px 5px;
+}
+.timeline-container {
+  padding-top: 4px;
+  margin-bottom: 32px;
+}
+.timeline-container:last-child {
+  margin-bottom: 0;
+}
+.timeline-container:before {
+  /* the vertical line running through icons */
+  content: "";
+  display: block;
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #E2E3E7;
+  background-color: #E7EAEF;
+  width: 4px;
+  border-width: 0 1px;
+}
+.timeline-container:first-child:before {
+  border-top-width: 1px;
+}
+.timeline-container:last-child:before {
+  border-bottom-width: 1px;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 8px;
+}
+.timeline-item .widget-box {
+  background-color: #F2F6F9;
+  color: #595C66;
+  padding-right:16px;
+}
+.timeline-item .transparent.widget-box {
+  border-left: 3px solid #DAE1E5;
+}
+.timeline-item .widget-box {
+  margin: 0;
+  position: relative;
+  max-width: none;
+  margin-left: 60px;
+}
+.timeline-item .widget-main {
+  margin: 0;
+  position: relative;
+  max-width: none;
+  border-bottom-width: 0;
+}
+.timeline-item .widget-body {
+  background-color: transparent;
+}
+.timeline-item .widget-toolbox {
+  padding: 4px 8px 0 !important;
+  background-color: transparent !important;
+  border-width: 0 !important;
+  margin: 0 0px !important;
+}
+.timeline-info {
+  float: left;
+  width: 60px;
+  text-align: center;
+  position: relative;
+}
+.timeline-info img {
+  border-radius: 100%;
+  max-width: 42px;
+}
+.timeline-info .label,
+.timeline-info .badge {
+  font-size: 12px;
+}
+.timeline-label {
+  display: block;
+  clear: both;
+  margin: 0 0 18px;
+  margin-left: 34px;
+}
+.timeline-item img {
+  border: 1px solid #AAA;
+  padding: 2px;
+  background-color: #FFF;
+}
+.timeline-style2:before {
+  display: none;
+}
+.timeline-style2 .timeline-item {
+  padding-bottom: 22px;
+  margin-bottom: 0;
+}
+.timeline-style2 .last-child {
+  padding-bottom: 0;
+}
+.timeline-style2 .last-child:before {
+  display: none !important;
+}
+.timeline-style2 .first-child:before {
+  display: block !important;
+}
+.timeline-style2 .timeline-item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 90px;
+  top: 5px;
+  bottom: -5px;
+  border-width: 0;
+  background-color: #DDD;
+  width: 2px;
+  max-width: 2px;
+}
+.timeline-style2 .timeline-item .transparent .widget-header {
+  background-color: transparent !important;
+}
+.timeline-style2 .timeline-item .transparent.widget-box {
+  background-color: transparent !important;
+  border-left: none !important;
+}
+.timeline-style2 .timeline-info {
+  width: 100px;
+}
+.timeline-style2 .timeline-indicator {
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px;
+  width: 12px;
+  border-width: 1px !important;
+  background-color: #FFFFFF !important;
+  position: absolute;
+  left: 85px;
+  top: 3px;
+  opacity: 1;
+  border-radius: 100%;
+  display: inline-block;
+  padding: 0;
+}
+.timeline-style2 .timeline-user {
+  display: inline-block;
+  width: 72px;
+  text-align: right;
+  margin-right: 25px;
+  font-size: 15px;
+}
+.timeline-style2 .timeline-item .widget-box {
+  margin-left: 112px;
+}
+.timeline-style2 .timeline-label {
+  width: 75px;
+  text-align: center;
+  margin-left: 0;
+  margin-bottom: 10px;
+  text-align: right;
+  color: #666;
+  font-size: 14px;
+}
+.timeline-time {
+  text-align: center;
+  position: static;
+}
+.timeline-date {
+	color: #4383B4;
+	line-height:30px;
+}
+.timeline-date {
+	color: #4383B4;
+	line-height:30px;
+}
+</style>
+<ion-modal-view ng-controller="TodoV5OpinionCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="opinionModal.close()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">审批详情</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="timeline-container timeline-style2">
+		<span class="timeline-label"> <b>流程详细</b>
+		</span>
+		
+		<div class="timeline-items" ng-repeat="item in opinionModal.opinionData.slice().reverse()">
+
+			<div class="timeline-item clearfix" ng-class="setItemClass($index)">
+				<div class="timeline-info">
+					<span class="timeline-user">{{item.username}}</span> <i
+						class="timeline-indicator icon ion-ios-circle-outline" style="color:red"></i>
+				</div>
+
+				<div class="widget-box transparent">
+					<div class="widget-body">
+						<div class="widget-main no-padding">
+							<div class="main-text">
+								{{item.content}}
+							</div>
+							<div class="timeline-date">
+								{{item.date}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<!-- <div class="timeline-items" >
+
+			<div class="timeline-item clearfix">
+				<div class="timeline-info">
+					<span class="timeline-user">王部长</span> <i
+						class="timeline-indicator icon ion-ios-circle-outline"></i>
+				</div>
+
+				<div class="widget-box transparent">
+					<div class="widget-body">
+						<div class="widget-main no-padding">
+							<div class="main-text">
+								Going to <span class="green bolder">veg cafe</span> for lunch
+							</div>
+							<div class="timeline-date">
+								2016-04-25
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="timeline-item clearfix">
+				<div class="timeline-info">
+					<span class="timeline-user">王部长</span> <i
+						class="timeline-indicator icon ion-ios-circle-outline"></i>
+				</div>
+
+				<div class="widget-box transparent">
+					<div class="widget-body">
+						<div class="widget-main no-padding">
+							<div class="main-text">
+								Going to <span class="green bolder">veg cafe</span> for lunch
+							</div>
+							<div class="timeline-date">
+								2016-04-25
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="timeline-item clearfix">
+				<div class="timeline-info">
+					<span class="timeline-user">王部长</span> <i
+						class="timeline-indicator icon ion-ios-circle-outline"></i>
+				</div>
+
+				<div class="widget-box transparent">
+					<div class="widget-body">
+						<div class="widget-main no-padding">
+							<div class="main-text">
+								Going to <span class="green bolder">veg cafe</span> for lunch
+							</div>
+							<div class="timeline-date">
+								2016-04-25
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="timeline-item clearfix">
+				<div class="timeline-info">
+					<span class="timeline-user">张部长</span> <i
+						class="timeline-indicator icon ion-ios-circle-outline"></i>
+				</div>
+
+				<div class="widget-box transparent">
+					<div class="widget-body">
+						<div class="widget-main no-padding">
+							<div class="main-text">
+								Going to <span class="green bolder">veg cafe</span> for lunch
+							</div>
+							<div class="timeline-date">
+								2016-04-25
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="timeline-item clearfix">
+				<div class="timeline-info">
+					<span class="timeline-user">李部长</span> <i
+						class="timeline-indicator icon ion-ios-circle-outline"></i>
+				</div>
+
+				<div class="widget-box transparent">
+					<div class="widget-body">
+						<div class="widget-main no-padding">
+							<div class="main-text">
+								Going to <span class="green bolder">veg cafe</span> for lunch
+							</div>
+							<div class="timeline-date">
+								2016-04-25
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</div>
+	<!-- <div class="opinion-area">
+			<div class="opinion-label">
+				<span class="input-label">流程意见</span>
+			</div>
+			<div class="opinion-items">
+				<div class="opinion-item clearfix">
+					<div class="opinion-icon">
+						<i class="icon opinion-indicator ion-social-twitter row-col-i"></i>
+					</div>
+					<div class="opinion-text">
+						<ion-item style="border-top-width: 0px;border-bottom-width: 0px;border-left-width: 0px;border-right-width: 0px;padding-left: 0px;padding-right: 16px;padding-top: 0px;padding-bottom: 0px;">
+							<span style="float:right">
+								<h3>王部长</h3>
+							</span>
+							<h2>同意</h2>
+							<h3 style="padding-top:5px;color:#888888">2016-04-25</h3>
+						</ion-item>
+					</div>
+				</div>
+				<div class="opinion-item clearfix">
+					<div class="opinion-icon">
+						<i class="icon opinion-indicator ion-social-twitter row-col-i"></i>
+					</div>
+					<div class="opinion-text">
+						<ion-item style="border-top-width: 0px;border-bottom-width: 0px;border-left-width: 0px;border-right-width: 0px;padding-left: 0px;padding-right: 16px;padding-top: 0px;padding-bottom: 0px;">
+							<span style="float:right">
+								<h3>王部长</h3>
+							</span>
+							<h2>同意</h2>
+							<h3 style="padding-top:5px;color:#888888">2016-04-25</h3>
+						</ion-item>
+					</div>
+				</div>
+				<div class="opinion-item clearfix">
+					<div class="opinion-icon">
+						<i class="icon opinion-indicator ion-social-twitter row-col-i"></i>
+					</div>
+					<div class="opinion-text">
+						<ion-item style="border-top-width: 0px;border-bottom-width: 0px;border-left-width: 0px;border-right-width: 0px;padding-left: 0px;padding-right: 16px;padding-top: 0px;padding-bottom: 0px;">
+							<span style="float:right">
+								<h3>王部长</h3>
+							</span>
+							<h2>同意</h2>
+							<h3 style="padding-top:5px;color:#888888">2016-04-25</h3>
+						</ion-item>
+					</div>
+				</div>
+				<div class="opinion-item clearfix">
+					<div class="opinion-icon">
+						<i class="icon opinion-indicator ion-social-twitter row-col-i"></i>
+					</div>
+					<div class="opinion-text">
+						<ion-item style="border-top-width: 0px;border-bottom-width: 0px;border-left-width: 0px;border-right-width: 0px;padding-left: 0px;padding-right: 16px;padding-top: 0px;padding-bottom: 0px;">
+							<span style="float:right">
+								<h3>王部长</h3>
+							</span>
+							<h2>同意</h2>
+							<h3 style="padding-top:5px;color:#888888">2016-04-25</h3>
+						</ion-item>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</ion-content>
+</ion-modal-view>
+

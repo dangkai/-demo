@@ -1,0 +1,50 @@
+<style>
+
+.login_button{
+   background-color:#007BEC;
+    width:90%;
+    text-align:center;
+    color:white;
+    font-size:1rem;
+    padding: 1rem;
+    border-radius:5px
+}
+
+ img{
+   width:80%;
+   height:80%;
+ }
+</style>
+<ion-modal-view ng-controller="modelScannerCtrl">
+  <ion-header-bar class="bar-positive" align-title="center">
+    <div class="buttons">
+      <button class="button button-icon icon ion-ios-arrow-left button-clear"
+              ng-click="goBack()">返回
+      </button>
+    </div>
+    <h1 class="title">二维码显示</h1>
+
+  </ion-header-bar>
+  <ion-content>
+    <div>
+    <div class="item  item-input">
+      <span class="input-label">用户名:</span>
+     <input type="text"readonly="readonly"  ng-model="userName"/>
+    </div>
+    <div class="item  item-input">
+      <span class="input-label">密码:</span>
+      <input type="text"readonly="readonly"ng-model="passWord"  />
+    </div>
+    <div style="display:flex;justify-content: center;align-items: center">
+         <img src="{{imgIosUrl}}" on-hold="onHold()" />
+    </div>
+     <hr/>
+    <div style="display:flex;justify-content: center;align-items: center"  ng-if="getFlag">
+      <img src="{{imgAndroidUrl}}" on-hold="onHold()" />
+    </div>
+
+    </div>
+  </ion-content>
+
+
+</ion-modal-view>

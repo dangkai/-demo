@@ -1,0 +1,341 @@
+<ion-modal-view ng-controller="ListCtrl1">
+  <style>
+    .item-complex .item-content {
+      padding: 0rem;
+    }
+
+    .selectFooterType_2_bg {
+      background: #EEEEEE;
+    }
+
+    /*页面加载效果 样式1*/
+    .load {
+      margin: 300px auto;
+
+      width: 150px;
+
+      text-align: center;
+
+    }
+
+    .load div {
+
+      width: 30px;
+
+      height: 30px;
+
+      background-color: rgb(118, 224, 250);
+
+      border-radius: 100%;
+
+      display: inline-block;
+
+      -webkit-animation: load 1.4s infinite ease-in-out;
+
+      -webkit-animation-fill-mode: both;
+
+    }
+
+    .load .circle1 {
+
+      -webkit-animation-delay: -0.32s;
+
+    }
+
+    .load .circle2 {
+
+      -webkit-animation-delay: -0.16s;
+
+    }
+
+    @-webkit-keyframes load {
+
+      0%, 80%, 100% {
+        -webkit-transform: scale(0.0)
+      }
+
+      40% {
+        -webkit-transform: scale(1.0)
+      }
+
+    }
+
+    /*.loading{*/
+    /*background-color: #000 !important;*/
+    /*opacity: 0.2;*/
+    /*}*/
+    .container {
+      width: 480px;
+      margin: 50px;
+    }
+
+    .progressBar {
+      display: inline-block;
+      width: 55%;
+      height: 22px;
+      background-color: rgba(0, 0, 0, 0.4);
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      margin-right: 3%;
+    }
+
+    #progressFill {
+      width: 0%;
+      height: 22px;
+      position: relative;
+      background-color: #40A4C2;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      background-size: 3em 3em;
+      background-image: linear-gradient(-45deg, transparent 0em, transparent 0.8em, #57D1F7 0.9em, #57D1F7 2.1em, transparent 2.1em, transparent 2.9em, #57D1F7 3.1em);
+      -webkit-animation: warning-animation 750ms infinite linear;
+      -moz-animation: warning-animation 750ms infinite linear;
+      animation: warning-animation 750ms infinite linear;
+    }
+
+    #progressFill:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      background-image: linear-gradient(to bottom, #40A4C2, rgbA(37, 117, 188, 0.8) 15%, transparent 60%, #40A4C2);
+    }
+
+    @-moz-keyframes warning-animation {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 3em 0;
+      }
+    }
+
+    @-webkit-keyframes warning-animation {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 3em 0;
+      }
+    }
+
+    @-ms-keyframes warning-animation {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 3em 0;
+      }
+    }
+
+
+    @-o-keyframes warning-animation {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 3em 0;
+      }
+    }
+		
+
+
+    @keyframes warning-animation {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 3em 0;
+      }
+    }
+
+    .progressText, #percentage {
+      position: absolute;
+      left: 45%;
+      display: inline-block;
+      /*margin-top: -11px;*/
+      vertical-align: middle;
+      color: white;
+    }
+    /*紧急程度 样式*/
+    .yiban{
+      background: green;
+    }
+    .ji{
+      background: #deb74d;
+    }
+    .teji{
+      background: red;
+    }
+
+     .list_div
+    {
+       padding: 5px  5px 5px 0px;
+       animation:myfirst_div 0.4s;
+      animation-fill-mode:forwards;
+    }
+		
+    @keyframes myfirst_div
+    {
+      from {padding-left:0px;}
+      to {padding-left:60px}
+    }
+    .list_div_test
+    {
+      padding: 5px  5px 5px 0px;
+      animation:myfirst 0.4s;
+      animation-fill-mode:forwards;
+    }
+		
+    @keyframes myfirst
+    {
+      from {padding-left:60px;}
+      to {padding-left:0px}
+    }
+		
+    .list_hidden_check_test
+    {
+      animation:myfirst_check_hidden 0.2s;
+      animation-fill-mode:forwards;
+    }
+		
+    @keyframes myfirst_check_hidden
+    {
+      from {opacity:1; visibility: visible; }
+      to {opacity:0; visibility: hidden;}
+    }
+
+    .list_visible_check_test
+    {
+      animation:myfirst_check_visible 0.35s;
+      animation-fill-mode:forwards;
+    }
+    @keyframes myfirst_check_visible
+    {
+      from {opacity:0 }
+      to {opacity:1}
+    }
+		
+  </style>
+  <ion-side-menus>
+    <!-- 中间内容 -->
+    <ion-side-menu-content>
+
+      <ion-header-bar class="bar-positive" align-title="center">
+        <div class="buttons">
+          <button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="goBack()">
+            返回
+          </button>
+        </div>
+        <h1 class="title">列表显示</h1>
+        <div class="buttons">
+          <button class="button button-icon icon  ion-ios-minus-outline" ng-click="selectFun()"></button>
+        </div>
+      </ion-header-bar>
+		<!-- 	  <ion-content  http-directive ><ion-refresher pulling-text="{{refresh}}" on-refresh="doRefresh()">
+				</ion-refresher>
+			<div class="list" ng-repeat="data in  list_Data track by $index" ng-click="detail(data)">
+	<!--<div class="item item-checkbox" ng-class="{true:'list_div',false:'list_div_test'}[flagShow]">
+			<label class="checkbox" ng-class="{true:' list_visible_check_test',false:'list_hidden_check_test'}[flagShow]">
+	
+				<div class="item item-checkbox" ng-class="{true:'list_div',false:'list_div_test'}[flagShow]">
+		 		<label class="checkbox" ng-class="{true:' list_visible_check_test',false:'list_hidden_check_test'}[flagShow]">
+		    <input type="checkbox" checked="data.flag">
+			</label>
+			 <div class="item item-avatar" style="border:0px  solid">
+			 <img src="{{data.url}}"/><h2>{{data.title}}</h2>
+			<p>{{data.text}}</p>
+			<p>{{data.time}}</p>
+			</div> </div> 
+			</div>
+			</ion-content> -->
+			
+			
+		   <list-directive flagshow="flagShow">
+					
+				</list-directive> 
+			
+			
+			<!-- <ion-list ng-reapet="item in Data" >
+				<ion-item>
+					<div style="overflow: hidden;line-height: 1.4rem;padding:0.5rerm 0rem 0rem 0rem">
+						<div style="float:left;font-weight: bold;width: 70%;">
+							我是显示内容</div>
+							<div style="float:left;width: 30%;text-align: right;">18K-19K-13薪</div>
+						</div>
+						<div style="padding:0.6rem 0rem 0rem 0rem;overflow: hidden;">
+							<span  style="float:left;background:#ddd;border-radius:2px;
+							background: #ddd;font-size:0.2rem;line-height: 0.9rem;padding: 0.2rem;">沙特</span>
+							
+						<span  style="float:left;background:#ddd;border-radius:2px;
+							background: #ddd;font-size: 0.2rem;line-height: 0.9rem;padding: 0.2rem;
+							margin-left:0.8rem">k-80w</span>
+							
+							<span  style="float:left;background:#ddd;border-radius:2px;
+								background: #ddd;font-size: 0.02rem;line-height: 0.9rem;padding: 0.2rem;
+								margin-left:0.8rem">029-091</span>
+						</div>
+						<div style="line-height: 1.5rem;padding:0.3rem 0rem 0rem 0rem;font-size:0.3rem">
+							  我在这是什么时候
+					</div>
+								<div style="line-height: 1.5rem;font-size:0.3rem;overflow: hidden;
+								padding:0.3rem 0rem 0rem 0rem">
+								 <span style="float:left;width:70%"> 
+								 <a style="overflow: hidden;" >
+                  <img src="//www.runoob.com/try/demo_source/spengler.jpg" 
+									style="float:left;border-radius: 50%;width:28px;height:28px;">
+									  <span style="float:left;padding:0.1rem 0rem 0rem 0.3rem">我是女生,漂亮的女生</span>
+                   </a>
+								 </span> 
+								 <span style="float:left;width:30%;text-align: left;"> 我在这是什么时候</span>
+								</div>
+					</ion-item>
+        </ion-list> -->
+			
+        <!-- <list-directive flagshow="flagShow">
+
+        </list-directive> -->
+        <!--<div  style="height:12px;background:#ddd"></div>-->
+        <!--<ion-refresher-->
+          <!--pulling-text="{{refresh}}"-->
+          <!--on-refresh="doRefresh()"></ion-refresher>-->
+        <!--<div class="list" ng-repeat="data in  Data track by $index" ng-click="detail(data)">-->
+          <!--<div class="item item-checkbox"-->
+               <!--ng-class="{true:'list_div',false:'list_div_test'}[flagShow]">-->
+            <!--<label class="checkbox"-->
+                   <!--ng-class="{true:'list_visible_check_test',-->
+       <!--false:'list_hidden_check_test'}[flagShow]">-->
+              <!--<input type="checkbox" checked="data.flag">-->
+            <!--</label>-->
+            <!--<div class="item item-avatar" style="border:0px  solid ">-->
+              <!--<img src="img/myinfo_normal.png"/>-->
+              <!--<h2>{{data.title}}</h2>-->
+              <!--<p>{{data.time}}</p>-->
+              <!--<p>{{data.time}}</p>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<ion-infinite-scroll ng-if="listModal2.moredata" on-infinite="listModal2.loadMore()" distance="1%" ></ion-infinite-scroll>-->
+      </ion-content>
+    </ion-side-menu-content>
+
+    <!-- 左侧菜单 -->
+<!--    <ion-side-menu side="left">
+    </ion-side-menu>-->
+
+    <!-- 右侧菜单 -->
+    <ion-side-menu side="right">
+    </ion-side-menu>
+  </ion-side-menus>
+
+
+</ion-modal-view>
+

@@ -1,0 +1,59 @@
+<style>
+
+. login_button{
+   background-color:blue;
+   width:90%;
+}
+</style>
+<ion-modal-view ng-controller="LoginListCtrl">
+  <ion-header-bar class="bar-positive" align-title="center">
+    <div class="buttons">
+      <button class="button button-icon icon ion-ios-arrow-left button-clear"
+              ng-click="goBack()">返回
+      </button>
+
+    </div>
+    <h1 class="title">表单数据</h1>
+    <div class="buttons">
+      <button class="button button-icon icon ion-ios-minus-outline"
+              ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
+      <button class="button button-icon icon  ion-android-add  button-clear"
+              ng-click="add()" style="color:white;font-size:1.1rem">
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+
+    <ion-list
+    show-delete="data.showDelete">
+    <ion-item ng-repeat="item in listData track by $index"
+              class="item-thumbnail-left">
+      <img ng-src="img/login.jpg">
+      <h2 STYLE="COLOR:#007BEC">类型:{{item.type}}</h2>
+      <p>编号：{{item.batchNo}}</p>
+      <p>国家：{{item.country}}</p>
+      <p>用户：{{item.userName}}</p>
+      <!--<ion-option-button class="button-positive"-->
+      <!--ng-click="share(item)">-->
+      <!--分享-->
+      <!--</ion-option-button>-->
+      <!--<ion-option-button class="button-info"-->
+      <!--ng-click="edit(item)">-->
+      <!--编辑-->
+      <!--</ion-option-button>-->
+      <ion-delete-button class="ion-minus-circled"
+                         ng-click="deleteFun($index)">
+      </ion-delete-button>
+      <ion-reorder-button class="ion-navicon"
+                          on-reorder="reorderItem(item, $fromIndex, $toIndex)">
+      </ion-reorder-button>
+
+    </ion-item>
+  </ion-list>
+   <div >
+
+   </div>
+
+  </ion-content>
+
+</ion-modal-view>

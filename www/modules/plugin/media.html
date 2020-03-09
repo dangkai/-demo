@@ -1,0 +1,18 @@
+﻿<ion-modal-view ng-controller="MediaCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="mediaModal.close()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">视频播放</h1>
+	</ion-header-bar>
+	<ion-content padding="true">
+		<br>
+		<div class="button button-block" ng-click="playMedia()">Play</div>
+		<br>
+		<p>{{media}}</p>
+		<br>
+		<div class="button button-block" ng-click="stopMedia()">Stop</div>
+	</ion-content>
+</ion-modal-view>

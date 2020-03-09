@@ -1,0 +1,71 @@
+<style>
+  .clickShow{
+    animation:myfirst .5s;
+    -webkit-animation:myfirst .5s;
+  }
+  @-webkit-keyframes myfirst /* Safari and Chrome */{
+    0%{-webkit-transform: translate3d(0,1000%,0);}
+    100% { -webkit-transform: translate3d(0,0,0); }
+  }
+  .lock_backdrop{
+    background: linear-gradient(-45deg,rgba(72, 216, 255, 0.97),#3a93f3);
+    background: -webkit-linear-gradient(-45deg,rgba(72, 216, 255, 0.97),#3a93f3);
+  }
+  .lock_hide{
+  	background-color:rgba(0,0,0,0);
+  	border-bottom: 0!important;
+  }
+  .lock_comm{
+  	text-align:center;
+  	overflow-y:hidden;
+  	overflow-x: hidden;
+  }
+  .lock_box{
+
+  }
+  .lock_h2{
+  	color: #FFFFFF;font-size: 1.5em;
+  	margin-top:1em!important;
+    text-align: center;
+  }
+  .lock_lock{
+  	position: fixed;width:100%
+  }
+  .lock_h22{
+  	color: #FFFFFF;
+  	font-size: 1.1em;
+  	position:fixed;
+  	display:block;
+  	text-align: center;
+  	width:100%;
+  	bottom:10em
+  }
+</style>
+<ion-modal-view ng-controller="lockCodeCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<a class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="lockCodeModal.cancel()">
+				退出
+			</a>
+		</div>
+	</ion-header-bar>
+	<ion-content ng-class="{true: 'lock_backdrop', false: ''}[lockCodeModal.hasLock]">
+    <div class="list" ng-show="!lockCodeModal.hasLock" ng-click="lockCodeModal.addLock()">
+		<label class="item item-input">
+			<span class="input-label">密码</span>
+			<input type="password" ng-model="lockCodeModal.data.password" id="lockpsd">
+		</label>
+		<label class="item">
+            <button class="button button-block button-positive" ng-click="lockCodeModal.doLogin()">登录</button>
+        </label>
+    </div>
+    <div id="lock_box" ng-show="lockCodeModal.hasLock">
+			<h2 class="lock_h2" id="lock-code-msg">输入解锁图案</h2>
+			<div id="lockCode" class="lock_lock" >
+
+			</div>
+				<h2 class="lock_h22" ng-click="lockCodeModal.cancel()" >取消图形锁</h2>
+		</div>
+
+	</ion-content>
+	</ion-modal-view>

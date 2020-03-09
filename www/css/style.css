@@ -1,0 +1,50 @@
+/* Empty. Add your own CSS if you like */
+
+.head-c {
+  background-color: #48B4FF;
+  color: #fff;
+}
+
+/*页面底部tab 切换样式*/
+.footer_un_select {
+  background-color: #33CCFF;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  width: 50%;
+  height: 100%;
+}
+
+.footer_selected {
+  background-color: #FF9933;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  width: 50%;
+  height: 100%;
+}
+
+/*列表样式1*/
+.list1_left_col {
+  line-height: 8;
+  text-align: center;
+  width: 20%;
+}
+
+.list1_left_col img {
+  width: 60px;
+  height: 60px;
+  vertical-align: middle
+}
+.list1_right_col_bottomRow_span{
+  padding: 0.2rem;
+  color: #fff;
+  /*width: 3rem;*/
+  height: 1.8rem;
+  text-align: center;
+}

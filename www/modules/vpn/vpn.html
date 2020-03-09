@@ -1,0 +1,47 @@
+<ion-modal-view ng-controller="VpnCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="vpnModal.close()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">Vpn</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="list">
+			<div class="item-divider"></div>
+			<div class="item" style="text-align:center;" 
+				ng-click="vpnModal.register()">
+				手机注册测试
+			</div>
+			<div class="item" style="text-align:center;"
+				ng-click="vpnModal.download()">
+				证书下载测试
+			</div>
+			<div class="item" style="text-align:center;"
+				ng-click="vpnModal.checkStatus()">
+				检测证书状态
+			</div>
+			<div class="item" style="text-align:center;"
+				ng-click="vpnModal.sslStart()">
+				启动SSL
+			</div>
+			<div class="item" style="text-align:center;"
+				ng-click="vpnModal.sslStop()">
+				停止SSL
+			</div>
+			<div class="item" style="text-align:center;"
+				ng-click="vpnModal.getApp()">
+				获取应用
+			</div>
+			<div class="item" style="text-align:center;"
+				ng-click="vpnModal.isStarted()">
+				SSL是否启动
+			</div>
+			<iframe
+            	ng-src="http://127.0.0.1:8086">
+    		</iframe>
+		</div>
+	</ion-content>
+</ion-modal-view>
+

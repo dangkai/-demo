@@ -1,0 +1,32 @@
+<ion-modal-view ng-controller="VpnCtrl">
+	<ion-side-menus>
+  <!--主页面-->
+  <ion-side-menu-content class="bar-positive"  align-title="center">
+    <!--主页面顶部bar-->
+    <ion-nav-bar class="bar-positive">
+	aaaaaaaa
+      <ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon-round"></button>
+	  </ion-nav-buttons>
+    </ion-nav-bar>
+    <!--主页面内容 关键的菜单内容name要对应到是菜单内容的页面-->
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-side-menu-content>
+  <!--侧滑页面-->
+  <ion-side-menu side="left">
+    <!--侧滑页面顶部bar-->
+    <ion-header-bar align-title="center" class="bar-dark">
+      <h1 class="title">需求</h1>
+      <div class="buttons pull-right" nav-clear menu-close ng-click="settings()">
+        <button class="button button-icon icon ion-gear-b"></button>
+      </div>
+    </ion-header-bar>
+    <!--侧滑页面主要内容-->
+    <ion-content class="has-header">
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </ion-content>
+    
+  </ion-side-menu>
+</ion-side-menus>
+</ion-modal-view>
+

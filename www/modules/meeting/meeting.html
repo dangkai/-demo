@@ -1,0 +1,205 @@
+<style>
+  .select_style{
+    background:white;
+    color:#000;
+  }
+  .selected_style{
+    background:red;
+    color:white;
+  }
+	#container2{
+		height:150px;
+	}
+</style>
+<ion-modal-view ng-controller="MeetingCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="goBack()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">图片识别</h1>
+	</ion-header-bar>
+	<ion-content>
+
+    <!--<avicit-fileupload>-->
+
+    <!--</avicit-fileupload>-->
+<div>
+    <div ng-switch="type">
+      <div class="list"   ng-switch-when="0">
+				    <img src="modules/meeting/web.jpg"  id="container2" />
+        <label class="item item-input">
+          <span class="input-label">名称:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.name"/>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">性别:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.sex"/>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">名族:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.ethnicity"/>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">出身日期:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.birth"/>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">地址:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.address"/>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">身份证号:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.number"/>
+        </label>
+      </div >
+      <!--1-->
+      <div class="list"   ng-switch-when="1">
+						<img src="modules/meeting/passport.jpg"  id="container2" style="height: 266px;width: 100%;"/>
+        <label class="item item-input">
+          <span class="input-label">名称:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.name"/>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">性别:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.sex"/>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">国家:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.nationality"/>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">颁发:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.issuing_authority"/>
+        </label>
+      </div >
+      <!--2-->
+      <div class="list"   ng-switch-when="5">
+			<img src="modules/meeting/table.jpg"  id="container2"style="height: 233px; width: 100%;" />
+        <div class="row">
+					<div class="col">
+						{{Form[0].word}}
+				  </div>
+						<div class="col">
+						{{Form[1].word}}
+					</div>
+					<div class="col">
+						{{Form[2].word}}
+					</div>
+					<div class="col">
+						{{Form[3].word}}
+					</div>
+					</div>
+					  <div class="row">
+						<div class="col">
+							{{Form[4].word}}
+					  </div>
+							<div class="col">
+							{{Form[5].word}}
+						</div>
+						<div class="col">
+							{{Form[6].word}}
+						</div>
+						<div class="col">
+							{{Form[7].word}}
+						</div>
+						</div>
+      </div >
+      <!--3-->
+      <div class="list"   ng-switch-when="3">
+							<img src="modules/meeting/pickter.jpg"  id="container2" style="height: 209px;width: 100%;"/>
+        <label class="item item-input">
+          <span class="input-label">公司名称:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.buyer_name"/>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">总金额:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.total"/>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">日期:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.issue_date"/>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">地址:</span>
+          <input  type="text"   readonly="readonly"  ng-model="Form.buyer_address"/>
+        </label>
+      </div >
+    </div>
+		</div>
+	</ion-content>
+	<ion-footer-bar style="padding:0px;margin:0px">
+		<div class="row" style="padding:0px;margin:0px">
+			<div class="col"style="    padding: 0px;
+    margin: auto 0px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;"
+			ng-click="Distinguish(0)"
+                 ng-class="{'0':'selected_style','1':'select_style',
+            '2':'select_style','3':'select_style'}[type]">
+			身份证
+			</div>
+			<div class="col" 
+			ng-click="Distinguish(1)"
+			 ng-class="{'0':'select_style','1':'selected_style',
+			'2':'select_style','3':'select_style'}[type]"
+			style="    padding: 0px;
+    margin: auto 0px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;border-left:1px solid #A7A7A7;">
+			护照
+			</div>
+			<!-- <div class="col"
+			 ng-click="Distinguish(2)" ng-class="{'0':'select_style','1':'select_style',
+			'2':'selected_style','3':'select_style'}[type]"
+			style="    padding: 0px;
+    margin: auto 0px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;border-left:1px solid #A7A7A7;">
+			表格
+			</div> -->
+			<div class="col"
+			ng-click="Distinguish(3)" ng-class="{'0':'select_style','1':'select_style',
+			'2':'select_style','3':'selected_style'}[type]"
+			style="    padding: 0px;
+    margin: auto 0px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;border-left:1px solid #A7A7A7;">
+			发票
+			</div>
+				</div>
+		</ion-footer-bar>
+</ion-modal-view>
+<!-- <script id="popover.html" type="text/ng-template">
+  <ion-popover-view 
+	style="padding:0px;margin:0px;width:150px; top:45px;left: 209px;">
+    <ion-content>
+        <div class="list">
+            <div  ng-click="Distinguish(0)"
+                 ng-class="{'0':'selected_style','1':'select_style',
+            '2':'select_style','3':'select_style'}[type]">身份证</div>
+            <div ng-click="Distinguish(1)" ng-class="{'0':'select_style','1':'selected_style',
+            '2':'select_style','3':'select_style'}[type]">护照</div>
+            <div  ng-click="Distinguish(2)" ng-class="{'0':'select_style','1':'select_style',
+            '2':'selected_style','3':'select_style'}[type]">通用表格</div>
+            <div ng-click="Distinguish(3)" ng-class="{'0':'select_style','1':'select_style',
+            '2':'select_style','3':'selected_style'}[type]">增值税发票</div>
+          </div>
+    </ion-content>
+  </ion-popover-view>
+</script> -->

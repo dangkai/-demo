@@ -1,0 +1,27 @@
+﻿<ion-modal-view ng-controller="OpenCtrl">
+	<ion-header-bar class="bar-positive" align-title="center">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-left button-clear" ng-click="openModal.close()">
+				返回
+			</button>
+		</div>
+		<h1 class="title">打开文件</h1>
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-plus-empty" ng-click="openModal.goAdd()"></button>
+		</div>
+	</ion-header-bar>
+	<ion-content>
+
+		<h1 class="text-center padding">请选择文件</h1>
+
+		<!--<div class="padding">
+			<button class="button button-block button-positive" ng-click="getFile()">
+				打开文件
+			</button>
+		</div>-->
+		<avicit-fileupload
+			url = 'http://10.216.77.219:8090/avicit-platform6-main/mobile/upload.do'
+			param = 'data'>
+		</avicit-fileupload>
+	</ion-content>
+</ion-modal-view>
